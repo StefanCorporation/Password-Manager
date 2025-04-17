@@ -58,6 +58,8 @@ def save():
             password_entry.delete(0, END)
        
 
+def find_password():
+    messagebox.showwarning(title="Oops", message="Button on air tho")
 
 # ---------------------------- UI SETUP ------------------------------- #
 
@@ -91,10 +93,10 @@ password_entry.grid(row=3, column=1, padx=(10, 15), )
 
 
 # Buttons
+search_button = Button(text="Search", width=15,  bg="Yellow", fg="purple", command=find_password)
+search_button.grid(row=1, column=2)
 generate_password_button = Button(text="Generate Password", command=generate_password)
 generate_password_button.grid(row=3, column=2, padx=(0, 0))
 add_button = Button(text="Add", width=40, command=save)
 add_button.grid(row=4, column=1, columnspan=2, padx=(10, 0))
-
-
 window.mainloop()
